@@ -54,6 +54,14 @@ struct ContentView: View {
             }
         }
         .padding()
+        .onAppear(perform: {
+            // スリープさせない
+            UIApplication.shared.isIdleTimerDisabled = true
+        })
+        .onDisappear(perform: {
+            UIApplication.shared.isIdleTimerDisabled = false
+        })
+        
     }
 }
 
