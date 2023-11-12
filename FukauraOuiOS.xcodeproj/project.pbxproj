@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA5191942B00986100C500F6 /* user_book1.db in Resources */ = {isa = PBXBuildFile; fileRef = AA5191932B00986100C500F6 /* user_book1.db */; };
 		AAEE8CEA29001A420054DA5E /* FukauraOuiOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE8CE929001A420054DA5E /* FukauraOuiOSApp.swift */; };
 		AAEE8CEC29001A420054DA5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE8CEB29001A420054DA5E /* ContentView.swift */; };
 		AAEE8CEE29001A470054DA5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAEE8CED29001A470054DA5E /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA5191932B00986100C500F6 /* user_book1.db */ = {isa = PBXFileReference; explicitFileType = compiled; fileEncoding = 4; path = user_book1.db; sourceTree = "<group>"; };
 		AAEE8CE629001A420054DA5E /* FukauraOuiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FukauraOuiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAEE8CE929001A420054DA5E /* FukauraOuiOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FukauraOuiOSApp.swift; sourceTree = "<group>"; };
 		AAEE8CEB29001A420054DA5E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		AAEE8CE829001A420054DA5E /* FukauraOuiOS */ = {
 			isa = PBXGroup;
 			children = (
+				AA5191932B00986100C500F6 /* user_book1.db */,
 				AAEE8CE929001A420054DA5E /* FukauraOuiOSApp.swift */,
 				AAEE8CEB29001A420054DA5E /* ContentView.swift */,
 				AAEE8CFC29001C570054DA5E /* DlShogiResnet.mlmodel */,
@@ -150,6 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA5191942B00986100C500F6 /* user_book1.db in Resources */,
 				AAEE8CF129001A470054DA5E /* Preview Assets.xcassets in Resources */,
 				AAEE8CEE29001A470054DA5E /* Assets.xcassets in Resources */,
 			);

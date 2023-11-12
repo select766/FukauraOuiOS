@@ -25,7 +25,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("FukauraOu iOS")
-            Text("将棋所の設定でDNN_Model1を空にする必要あり")
+            Text("将棋所の設定\nDNN_Model1: (空にする)\nDNN_Batch_Size1: 8\nBookFile: user_book1.db\nBookDir: . (ドット)\nBookDepthLimit: 0 (テラショック定跡固有)\nBookMoves: 32\nIgnoreBookPly: on (電竜戦用)\nPonderする場合\nUSI_Ponder: on\nStochastic_Ponder: on")
             Text(connectionStatus)
             HStack {
                 Text("USI Host IP:")
@@ -42,6 +42,12 @@ struct ContentView: View {
                 print(DlShogiResnet.urlOfModelInThisBundle.absoluteString)
                 let model_url_p = stringToUnsafeMutableBufferPointer(DlShogiResnet.urlOfModelInThisBundle.absoluteString)
                 let compute_units: Int32 = 2 // 0:cpu, 1: cpuandgpu, 2: all (neural engine)
+                // 定跡をパス "./user_book1.db" で読めるようにカレントディレクトリを変更
+                if let book_path = Bundle.main.path(forResource: "user_book1", ofType: "db") {
+                    let book_path_url = URL(fileURLWithPath: book_path)
+                    let directory_path = book_path_url.deletingLastPathComponent().path
+                    FileManager.default.changeCurrentDirectoryPath(directory_path)
+                }
                 let mainResult = YaneuraOuiOSSPM.yaneuraou_ios_main(host_p.baseAddress!, 8090, model_url_p.baseAddress!, compute_units)
                 print("yaneuraou_ios_main", mainResult)
                 if mainResult == 0 {

@@ -44,3 +44,10 @@ nc -l 8090
 `DlShogiResnet.mlmodel`を別のモデルに置換する。dlshogi等で用いられるONNX形式ではなく、Apple独自のmlmodel形式が必要。作り方の参考: https://select766.hatenablog.com/entry/2022/01/29/190100
 
 Githubリポジトリに含まれているモデルは5ブロック64チャンネルの小さいもの。他に使える学習済みモデルファイルは https://github.com/select766/FukauraOu-CoreML/releases/tag/coreml-sample-20220613 にある。
+
+# ライセンス
+
+やねうら王に従いGPLv3とします。
+
+`user_book1.db` はやねうら王プロジェクトの100テラショック定跡です。
+
